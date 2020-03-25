@@ -1,15 +1,15 @@
 
 exports.up = function (knex) {
-    knex.schema.createTable('incidents', function (table) {
+    return knex.schema.createTable('incidents', function (table) {
         table.increments();
 
-        table.string('name').notNullable();
+        table.string('title').notNullable();
         table.string('description').notNullable();
         table.decimal('value').notNullable();
 
         table.string('ong_id').notNullable();
 
-        table.foreing('ong_id').references('id').inTable('ongs')
+        table.foreign('ong_id').references('id').inTable('ongs')
 
     })
 };
