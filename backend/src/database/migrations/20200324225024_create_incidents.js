@@ -9,7 +9,7 @@ exports.up = function (knex) {
 
         table.string('ong_id').notNullable();
 
-        table.foreing('onf_id').references('id').inTable('ongs')
+        table.foreing('ong_id').references('id').inTable('ongs')
 
     })
 };
