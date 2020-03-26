@@ -8,7 +8,7 @@ import './styles.css' //import css
 import logoImg from '../../assets/logo.svg'
 
 
-export default function LProfile() {
+export default function Profile() {
     return (
         <div className="profile-container">
             <header>
