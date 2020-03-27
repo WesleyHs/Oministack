@@ -34,8 +34,12 @@ export default function Incidents() {
                 showsVerticalScrollIndicator={false}
                 renderItem={() => (
                     <View  style={styles.incident}>
-                        <Text style={styles.incidentProperty}> ONG:</Text>
+                        <Text style={styles.incidentProperty}>ONG:</Text>
                         <Text style={styles.incidentValue}> APAD</Text>
+
+                        <Text style={styles.incidentProperty}>Caso:</Text>
+                        <Text style={styles.incidentValue}>Testando o caso</Text>
+
 
                         <Text style={styles.incidentProperty}>Valor:</Text>
                         <Text style={styles.incidentValue}>R$ 120,00</Text>
