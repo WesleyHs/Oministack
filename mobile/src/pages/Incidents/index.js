@@ -28,7 +28,7 @@ export default function Incidents() {
             <Text style={styles.description}> Escolha um dos casos abaixo e salve o dia. </Text>
 
             <FlatList
-                data={[1, 2, 3, 4, 5, 6]}
+                data={[1, 2, 3, 4,]}
                 style={styles.incidentList}
                 keyExtractor={incident => String(incident)}
                 showsVerticalScrollIndicator={false}
