@@ -12,18 +12,24 @@ import styles from './styles';
 export default function Detail() {
 
     const navigation = useNavigation();
+    const message = 'Olá, APAD, estou entrando em contato pois gostaria de ajudar no caso "Cadelinha atropelada" com o valor de R$ 120,00'
 
     function navigateBack() {
         navigation.goBack()
     }
 
     function sendMail() {
-
+        MailComposer.composeAsync({
+            sebject: 'Heorio do caso: Cadelinha atropelada',
+            recipients: ['wesley.henrique.pgm@gmail.com.br',],
+            body: message, 
+        })
     }
 
     function sendWhatsapp() {
 
     }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -55,7 +61,7 @@ export default function Detail() {
                     <TouchableOpacity style={styles.action} onPress={() => { }}>
                         <Text style={styles.actionText}> Whatsapp</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.action} onPress={() => { }}>
+                    <TouchableOpacity style={styles.action} onPress={sendMail}>
                         <Text style={styles.actionText}> E-mail</Text>
                     </TouchableOpacity>
 
